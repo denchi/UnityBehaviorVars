@@ -1,0 +1,16 @@
+{
+    "name": "Behaviour.Vars.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Behaviour.Vars"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

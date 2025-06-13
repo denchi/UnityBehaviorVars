@@ -1,0 +1,9 @@
+{
+    "name": "com.deathbygravitystudio.behaviour.vars",
+    "version": "0.1.0",
+    "displayName": "Behaviour Vars",
+    "description": "Shared variable system for behaviours",
+    "author": {
+        "name": "Death By Gravity Studio"
+    }
+}
