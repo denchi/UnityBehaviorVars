@@ -125,8 +125,7 @@ public class GenericWindow<T> : EditorWindow where T: UnityEngine.Object, new()
         float buttonMargin = 5;
 
         // Draw opaque background for the properties window
-        var rectangleColor = new Color(0.2f, 0.2f, 0.2f, 1);
-        EditorBehaviourGUI.FillRectangle(new Rect(0, 0, windowRect.width, windowRect.height), rectangleColor);
+        EditorBehaviourGUI.FillRectangle(new Rect(0, 0, windowRect.width, windowRect.height), new Color(0.2f, 0.2f, 0.2f, 1f));
 
         if (windowExpanded)
         {
