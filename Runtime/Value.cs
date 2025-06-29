@@ -1,45 +1,21 @@
 ﻿using System.Globalization;
 using UnityEngine;
 using System.IO;
-using Sirenix.OdinInspector;
 
 namespace Behaviours
 {
     public class Value : ScriptableObject
     {
-        [HorizontalGroup("Value", order: -1)]
-        [ShowInInspector]
-        [HideLabel]
         public string Name
         {
             get => name;
             set => name = value; 
         }
-        
-        [HorizontalGroup("Value")]
-        [HideLabel]
         public ValueType type;
-        
-        [ShowIf(nameof(IsValueBool))]
-        [HorizontalGroup("Value", Width = 18)]
-        [HideLabel]
         public bool bValue;
-        
-        [ShowIf(nameof(IsValueInt))]
-        [HorizontalGroup("Value")]
-        [HideLabel]
         public int iValue;
-        
-        [ShowIf(nameof(IsValueFloat))]
-        [HorizontalGroup("Value")]
-        [HideLabel]
         public float fValue;
-        
-        [ShowIf(nameof(IsValueString))]
-        [HorizontalGroup("Value")]
-        [HideLabel]
         public string sValue;
-        
         public object runtimeObject;
 
         //

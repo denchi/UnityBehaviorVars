@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
-using Sirenix.OdinInspector;
 using UnityEditor;
 
 namespace Behaviours
@@ -11,8 +10,7 @@ namespace Behaviours
         public bool enabled;
 
         #if UNITY_EDITOR
-        [InlineEditor(InlineEditorObjectFieldModes.Hidden)]
-        [ListDrawerSettings(CustomAddFunction = nameof(AddValue), CustomRemoveIndexFunction = nameof(RemoveValue))]
+        // Odin attributes removed, no effect
         #endif
         public List<Value> values;
 

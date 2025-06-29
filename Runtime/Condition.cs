@@ -4,66 +4,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Linq;
-using Sirenix.OdinInspector;
 
 namespace Behaviours
 {
     public class Condition : ScriptableObject
     {
-        [HorizontalGroup("Value")]
-        [ValueDropdown(nameof(Values))]
-        [HideLabel]
         public Value value;
-        
-        [HorizontalGroup("Value")]
-        [HideLabel]
         public Operation operation;
-
-        [HorizontalGroup("Value")]
-        [ShowIf(nameof(IsValueBool))]
-        [HideLabel]
         public bool bConstant;
-        
-        [HorizontalGroup("Value")]
-        [ShowIf(nameof(IsValueInt))]
-        [HideLabel]
         public int iConstant;
-        
-        [HorizontalGroup("Value")]
-        [ShowIf(nameof(IsValueFloat))]
-        [HideLabel]
         public float fConstant;
-        
-        [HorizontalGroup("Value")]
-        [ShowIf(nameof(IsValueString))]
-        [HideLabel]
         public string sConstant;
 
-        [HorizontalGroup("Value")]
-        [HideLabel]
         public Operand nextOperand;
 
-        private bool IsValueBool => value is { type: ValueType.Bool };
-        private bool IsValueInt => value is { type: ValueType.Integer };
-        private bool IsValueFloat => value is { type: ValueType.Float };
-        private bool IsValueString => value is { type: ValueType.String };
-
-        private IEnumerable Values
-        {
-            get
-            {
-                #if UNITY_EDITOR
-                var thisPath = UnityEditor.AssetDatabase.GetAssetPath(this);
-                var mainAsset = UnityEditor.AssetDatabase.LoadMainAssetAtPath(thisPath);
-                if (mainAsset is ILayer layer)
-                {
-                    return layer.values.Select(v => new ValueDropdownItem(v.name, v));
-                }
-                #endif
-
-                return Array.Empty<ValueDropdownItem>();
-            }
-        }
+        // private bool IsValueBool => value is { type: ValueType.Bool };
+        // private bool IsValueInt => value is { type: ValueType.Integer };
+        // private bool IsValueFloat => value is { type: ValueType.Float };
+        // private bool IsValueString => value is { type: ValueType.String };
+        //
+        // private IEnumerable Values
+        // {
+        //     get
+        //     {
+        //         #if UNITY_EDITOR
+        //         var thisPath = UnityEditor.AssetDatabase.GetAssetPath(this);
+        //         var mainAsset = UnityEditor.AssetDatabase.LoadMainAssetAtPath(thisPath);
+        //         if (mainAsset is ILayer layer)
+        //         {
+        //             return layer.values.Select(v => new ValueDropdownItem(v.name, v));
+        //         }
+        //         #endif
+        //
+        //         return Array.Empty<ValueDropdownItem>();
+        //     }
+        // }
 
         void OnEnable()
         {
