@@ -1,6 +1,6 @@
 # Behaviour Vars
 
-Shared variable and condition system for Unity behaviours: named `Value` assets on an `ILayer`, copied into runtime data and tested with `Condition`.
+Behaviour Vars provides named values and reusable conditions for Unity packages. `ILayer` exposes values; runtime code copies them into a `RuntimeValueCollection` for evaluation.
 
 Package id: `com.deathbygravitystudio.behaviour.vars` (0.1.0). Assemblies: `Behaviour.Vars` and `Behaviour.Vars.Editor`. Runtime types live in `Behaviours` and `Behaviours.Runtime`.
 
